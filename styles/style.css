@@ -1,0 +1,265 @@
+@keyframes slide_to_top {
+  0% {
+    top: 100px;
+  }
+  100% {
+    top: 20px;
+  }
+}
+@keyframes slide_to_middle {
+  0% {
+    bottom: -30px;
+  }
+  100% {
+    bottom: 50px;
+  }
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+@keyframes rotate_span {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+@keyframes slide_img {
+  0% {
+    left: -30px;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes slide_img_services {
+  0% {
+    left: -40px;
+  }
+  100% {
+    left: 0;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: ubuntu, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+*::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 10px;
+}
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #a0b2bb;
+  transition: background-color 240ms;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+*::-webkit-scrollbar-track-piece {
+  background: #e6e6e6;
+}
+.main-width {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.container {
+  width: 100%;
+}
+.relative {
+  position: relative;
+}
+header {
+  width: 100%;
+  padding: 20px 50px;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-container .logo {
+  max-width: 20%;
+}
+.header-container .logo h4 {
+  color: #c7c7c7;
+}
+.header-container .menu {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-container .menu .item {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.header-container .menu .signInsignUP span {
+  color: #1979e7;
+  margin: 0 5px;
+}
+.header-container .menu .services i,
+.header-container .menu .pages i {
+  margin-left: 10px;
+}
+.header-container .menu .profile_icon {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.header-container .menu a {
+  color: #1979e7;
+  cursor: pointer;
+}
+.header-container .menu i {
+  color: #1979e7;
+  margin-top: 5px;
+}
+.banner-upper {
+  background-image: url(../images/content.jpg);
+  min-height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 100px;
+}
+.banner-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.banner-info h2 {
+  text-align: center;
+  font-size: 56px;
+  color: #ffffff;
+  max-width: 60%;
+  margin: 60px auto;
+}
+.banner-form form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 15px;
+}
+.banner-form form input {
+  flex-basis: 350px;
+  padding: 15px;
+  margin-left: 10px;
+  border: 1px solid #cccccc;
+  margin-top: 15px;
+  outline: none;
+}
+.banner-form form i {
+  position: absolute;
+  color: #c7c7c7;
+  top: 35px;
+  right: 10px;
+}
+.banner-form form .search input {
+  padding: 15px 50px;
+  background-color: #f91939;
+  cursor: pointer;
+  border: 1px solid #f91939;
+  color: #ffffff;
+  font-weight: bold;
+}
+.apartments h2 {
+  text-align: center;
+  font-size: 46px;
+  margin: 40px auto 30px;
+}
+.apartments .apartment_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.apartments .apartment_list .ap_one {
+  flex-basis: 340px;
+  overflow: hidden;
+  margin: 15px;
+  position: relative;
+}
+.apartments .apartment_list .ap_one .img_title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.apartments .apartment_list .ap_one .img_title a {
+  text-decoration: none;
+  color: #1979e7;
+}
+.apartments .apartment_list .ap_one p a:hover {
+  color: #f91939;
+}
+.apartments .apartment_list .ap_one .apartment_info {
+  position: relative;
+  min-height: 270px;
+}
+.apartments .apartment_list .ap_one img {
+  position: absolute;
+  left: -30px;
+}
+.apartments .apartment_list .ap_one:hover img {
+  animation-name: slide_img;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  left: 0;
+  opacity: 1.5;
+}
+.apartments .apartment_list .ap_one .apartment_info .price p {
+  position: absolute;
+  background-color: #f90029;
+  right: 0;
+  bottom: 20px;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 10px;
+  padding-right: 25px;
+}
+.apartments .apartment_list .ap_one .apartment_info .price p span {
+  font-size: 14px;
+  font-weight: regular;
+}
+.apartments .apartment_list .ap_one .apartment_info .text_hover {
+  position: absolute;
+  animation: slide_to_top;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+  color: #ffffff;
+  top: 20px;
+  left: 25px;
+  right: 25px;
+  line-height: 1.7;
+  display: none;
+  z-index: 1000;
+}
+
+.apartments .apartment_list .ap_one .apartment_info:hover .text_hover {
+  display: block;
+}
+.apartments .apartment_list .ap_one .apartment_info::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  opacity: 0.5;
+  z-index: 1;
+}
+.advantages {
+  margin-top: 30px;
+}
